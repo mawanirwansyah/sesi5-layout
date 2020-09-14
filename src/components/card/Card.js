@@ -1,18 +1,21 @@
 import React from 'react';
 
-
 import AvatarImages from  '../../assets/mawan.jpg'
 import Avatar from '../Avatar/Avatar';
 import Button from '../Button/Button';
-import  './Card.css';
+
+import {
+    CardMeetup,
+    CardMeetup2,
+} from './Card.styles';
 
 const Card = (PropsCard) => {
     return(
         <div >
-            <div className="CardMeetup">
+            <CardMeetup>
                 <div ><Avatar src={AvatarImages} alt={AvatarImages}/></div>
                 
-                <div className="CardMeetup2">
+                <CardMeetup2>
                 <h2>Hacktiv8 Meetup</h2>
                 <table>
                
@@ -32,10 +35,10 @@ const Card = (PropsCard) => {
                  <td>{PropsCard.organizer}</td>
                 </tr>
                 </table>
-               
-                <Button buttonText="Join us"/>
-                </div>
-            </div>
+                <Button primary="primary" text="Join Us!"></Button>
+                <Button text="Subscribe"></Button>
+                </CardMeetup2>
+           </CardMeetup>
         </div>
     )
 }

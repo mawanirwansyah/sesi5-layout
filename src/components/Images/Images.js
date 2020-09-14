@@ -1,14 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-
-
-import './Images.css';
-
+import{
+    AvatarStyle
+} from './Images.styles'
 
 const Images = ({src, alt }) => {
     return (
-        <img src={src} alt={alt} className="Images"/>
+       <AvatarStyle src={src} alt={alt}></AvatarStyle>
 
     );
 }
@@ -17,8 +16,6 @@ Images.propTypes = {
     src: PropTypes.string.isRequired,
     alt: PropTypes.string,
     
-    
-
 }
 
 export default Images;

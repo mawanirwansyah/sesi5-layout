@@ -4,16 +4,19 @@ import React from 'react';
 import AvatarImages from '../../assets/mawan.jpg';
 import Images from '../Images/Images';
 
-import  './members.css';
+import {
+    CardMembers,
+    CardMembers2
+} from './members.styles'
 
 
 const MembersCard = (propsOrganizer) => {
     return(
         <div >
-            <div className="CardMembers">
+            <CardMembers>
                 <div > <Images src={AvatarImages} alt={AvatarImages} className="AvatarMembers"/></div>
                 
-                <div className="CardMembers2">
+                <CardMembers2>
                 <h2>Organizers</h2>
                 <table>
                
@@ -26,8 +29,8 @@ const MembersCard = (propsOrganizer) => {
                 </table>
                
                
-                </div>
-            </div>
+                </CardMembers2>
+            </CardMembers>
         </div>
     )
 }

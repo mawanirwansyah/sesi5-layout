@@ -1,22 +1,15 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-import './Button.css';
+import {
+    Btn
+} 
+from './Button.styles';
 
-const Button = ({buttonText}) => {
-    return(
-        <div>
-        <button type="button" className="Buttonjs button2">{buttonText}</button> 
-        </div>
+const Button = (props) => {
+    return (
+    <Btn primary={props.primary}>{props.text}</Btn>
+        // <button className="button">{param.text}</button>
     );
-}
-
-
-Button.propTypes = {
-    buttonText: PropTypes.string.isRequired,
-   
-    
-
 }
 
 export default Button;
